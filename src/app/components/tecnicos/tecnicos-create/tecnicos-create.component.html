@@ -1,0 +1,66 @@
+<app-nav-bar>
+  <ng-container>
+    <form #form="ngForm" class="form" (ngSubmit)="create(form)">
+      <h1>Criação de um novo técnico</h1>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input
+          name="nome"
+          matInput
+          placeholder="Ex. Garibaldo Ormind"
+          required
+          maxlength="100"
+          [(ngModel)]="tecnico.nome"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input
+          name="cpf"
+          matInput
+          placeholder="Ex. 000.000.000-00"
+          mask="000.000.000-00"
+          required
+          [(ngModel)]="tecnico.cpf"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          name="email"
+          type="email"
+          matInput
+          placeholder="Ex. exemplo@exemplo.com"
+          [(ngModel)]="tecnico.email"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input
+          name="senha"
+          matInput
+          placeholder="Senha do técnico"
+          type="password"
+          [(ngModel)]="tecnico.senha"
+        />
+      </mat-form-field>
+      <section class="example-section">
+        <mat-checkbox color="primary" class="margin" (click)="addPerfil(0)">Administrador</mat-checkbox>
+        <mat-checkbox color="primary" class="margin"(click)="addPerfil(1)">Técnico</mat-checkbox>
+        <mat-checkbox color="primary" class="margin"(click)="addPerfil(2)">Cliente</mat-checkbox>
+      </section>
+
+      <button  mat-stroked-button color="primary">
+        <strong>Criar</strong>
+      </button>
+      <button mat-stroked-button color="warn">
+        <strong>Cancelar</strong>
+      </button>
+    </form>
+
+    {{ tecnico | json }}
+  </ng-container>
+</app-nav-bar>

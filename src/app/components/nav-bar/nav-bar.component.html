@@ -1,0 +1,40 @@
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="over" class="sidenav">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/home">
+        <i class="material-icons">home</i>Home
+      </a>
+      <a mat-list-item routerLink="/tecnicos">
+        <i class="material-icons">work</i>Técnicos
+      </a>
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">person_search</i>Clientes
+      </a>
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">person_pin</i>Chamados
+      </a>
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">quiz</i>FAQ
+      </a>
+      <a mat-list-item routerLink="/exit">
+        <i class="material-icons">logout</i>Sair
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>
+        <h1 class="mat-elevation-z8">Helpr</h1>
+      </span>
+      <img src="assets/icons/icon-72x72.png" alt="" />
+    </mat-toolbar>
+
+    <div class="container">
+      <ng-content></ng-content>
+  </div>
+  </mat-drawer-content>
+</mat-drawer-container>
