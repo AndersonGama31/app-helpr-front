@@ -56,9 +56,9 @@
       <button  mat-stroked-button color="primary">
         <strong>Criar</strong>
       </button>
-      <button mat-stroked-button color="warn">
+      <a mat-stroked-button color="warn" [routerLink]="['/tecnicos']" >
         <strong>Cancelar</strong>
-      </button>
+      </a>
     </form>
 
     {{ tecnico | json }}

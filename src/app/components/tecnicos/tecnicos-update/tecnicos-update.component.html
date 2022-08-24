@@ -56,9 +56,10 @@
       <button  mat-stroked-button color="primary">
         <strong>Editar</strong>
       </button>
-      <button mat-stroked-button color="warn">
-        <strong>Cancelar</strong>
-      </button>
+
+    <a mat-stroked-button color="warn" [routerLink]="['/tecnicos']" >
+      <strong>Cancelar</strong>
+    </a>
     </form>
 
     {{ tecnico | json }}
