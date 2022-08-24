@@ -77,6 +77,18 @@ export class TecnicosUpdateComponent implements OnInit {
           this.toastr.success('Técnico editado com sucesso!', 'Sucesso');
           this.router.navigate(['/tecnicos']);
         },
+        error: (err) => {
+          switch (err.status) {
+            case 403:
+              return this.toastr.error('Ação não permitida');
+            case 409:
+              return this.toastr.error(err.error.message);
+            default:
+              return this.toastr.error(
+                `Um erro aconteceu: ${err.error.message ?? ''}`
+              );
+          }
+        },
       });
     } else {
       this.toastr.error('Dados inválidos', 'Erro');
