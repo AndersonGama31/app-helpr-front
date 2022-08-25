@@ -10,6 +10,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 import { UtilsModule } from './utils/utils.module';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +26,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     }),
     HttpClientModule,
     JwtModule,
-    UtilsModule
+    UtilsModule,
+    HotToastModule.forRoot()
   ],
   providers: [
     {

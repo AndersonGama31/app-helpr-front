@@ -30,10 +30,20 @@ const routes: Routes = [
       canActivate: [AuthGuard]
   },
   {
+    path: 'clientes',
+    loadChildren: () =>
+      import('./components/clientes/clientes.module').then(
+        (m) => m.ClientesModule
+      ),
+      canActivate: [AuthGuard]
+  },
+  {
     path: "logout",
     component: ExitComponent,
     canActivate: [AuthGuard]
-  }
+  },
+ 
+  { path: 'chamados', loadChildren: () => import('./components/chamados/chamados.module').then(m => m.ChamadosModule) }
 ];
 
 @NgModule({

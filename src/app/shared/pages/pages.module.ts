@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ChamadosModule } from 'src/app/components/chamados/chamados.module';
 import { HomeModule } from 'src/app/components/home/home.module';
 import { LoginModule } from 'src/app/components/login/login.module';
 import { NavBarModule } from 'src/app/components/nav-bar/nav-bar.module';
@@ -11,7 +12,8 @@ import { TecnicosModule } from 'src/app/components/tecnicos/tecnicos.module';
     HomeModule,
     LoginModule,
     TecnicosModule,
-    NavBarModule
+    NavBarModule,
+    ChamadosModule
   ]
 })
 export class PagesModule { }
