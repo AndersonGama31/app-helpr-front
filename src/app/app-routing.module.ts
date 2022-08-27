@@ -4,7 +4,6 @@ import { AuthGuard } from './guards/auth.guard';
 import { ExitComponent } from './utils/exit/exit.component';
 
 const routes: Routes = [
- 
   {
     path: '',
     pathMatch: 'full',
@@ -17,9 +16,9 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => 
-       import('./components/home/home.module').then((m) => m.HomeModule),
-       canActivate: [AuthGuard]
+    loadChildren: () =>
+      import('./components/home/home.module').then((m) => m.HomeModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'tecnicos',
@@ -27,7 +26,7 @@ const routes: Routes = [
       import('./components/tecnicos/tecnicos.module').then(
         (m) => m.TecnicosModule
       ),
-      canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: 'clientes',
@@ -35,15 +34,21 @@ const routes: Routes = [
       import('./components/clientes/clientes.module').then(
         (m) => m.ClientesModule
       ),
-      canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
-    path: "logout",
+    path: 'logout',
     component: ExitComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
- 
-  { path: 'chamados', loadChildren: () => import('./components/chamados/chamados.module').then(m => m.ChamadosModule) }
+
+  {
+    path: 'chamados',
+    loadChildren: () =>
+      import('./components/chamados/chamados.module').then(
+        (m) => m.ChamadosModule
+      ),
+  },
 ];
 
 @NgModule({

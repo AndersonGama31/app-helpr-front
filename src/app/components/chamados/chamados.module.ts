@@ -6,11 +6,18 @@ import { ChamadosComponent } from './chamados.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavBarModule } from '../nav-bar/nav-bar.module';
+import { PipesModule } from 'src/app/pipes/pipes.module';
+import { ChamadosCreateComponent } from './chamados-create/chamados-create.component';
+import { ChamadosUpdateComponent } from './chamados-update/chamados-update.component';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
   declarations: [
-    ChamadosComponent
+    ChamadosComponent,
+    ChamadosCreateComponent,
+    ChamadosUpdateComponent,
+    DetailsComponent
   ],
   imports: [
     CommonModule,
@@ -18,11 +25,14 @@ import { NavBarModule } from '../nav-bar/nav-bar.module';
     MaterialModule,
     FormsModule,
     NavBarModule,
+    PipesModule,
     ReactiveFormsModule
   ],
   exports:
   [
-    ChamadosComponent
+    ChamadosComponent,
+    ChamadosCreateComponent,
+    ChamadosUpdateComponent
   ]
 })
 export class ChamadosModule { }

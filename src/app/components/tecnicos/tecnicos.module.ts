@@ -10,12 +10,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 import { TecnicosUpdateComponent } from './tecnicos-update/tecnicos-update.component';
 
-
 @NgModule({
   declarations: [
     TecnicosComponent,
     TecnicosCreateComponent,
-    TecnicosUpdateComponent
+    TecnicosUpdateComponent,
   ],
   imports: [
     CommonModule,
@@ -24,11 +23,12 @@ import { TecnicosUpdateComponent } from './tecnicos-update/tecnicos-update.compo
     NavBarModule,
     ReactiveFormsModule,
     FormsModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
   ],
   exports: [
     TecnicosComponent,
-    TecnicosCreateComponent
-  ]
+    TecnicosCreateComponent,
+    TecnicosUpdateComponent,
+  ],
 })
-export class TecnicosModule { }
+export class TecnicosModule {}

@@ -1,40 +1,35 @@
 import { NgModule } from '@angular/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-exports:[
+  exports: [
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
-    MatIconModule ,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
     MatIconModule,
-    MatSelectModule,
+    MatListModule,
     MatInputModule,
-    MatDatepickerModule,
-    MatButtonModule,
-    MatCardModule,
     MatTableModule,
-    MatSnackBarModule,
     MatPaginatorModule,
     MatCheckboxModule,
-    MatFormFieldModule
-]
+    MatRadioModule,
+    MatTooltipModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatCardModule
+  ]
 })
 export class MaterialModule { }

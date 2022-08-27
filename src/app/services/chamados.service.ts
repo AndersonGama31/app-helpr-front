@@ -8,7 +8,7 @@ import { Chamado } from '../models/chamado';
   providedIn: 'root'
 })
 export class ChamadosService {
-  chamadosUrl = `${API_CONFIG.baseUrl}/service/chamados`;
+  chamadosUrl = `${API_CONFIG.serviceUrl}/chamados`;
 
   constructor(private http: HttpClient) {}
 

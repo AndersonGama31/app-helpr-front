@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { ChamadosModule } from 'src/app/components/chamados/chamados.module';
+import { ClientesModule } from 'src/app/components/clientes/clientes.module';
 import { HomeModule } from 'src/app/components/home/home.module';
 import { LoginModule } from 'src/app/components/login/login.module';
 import { NavBarModule } from 'src/app/components/nav-bar/nav-bar.module';
 import { TecnicosModule } from 'src/app/components/tecnicos/tecnicos.module';
 
 
-
 @NgModule({
-  exports:[
+  exports: [
     HomeModule,
     LoginModule,
     TecnicosModule,
-    NavBarModule,
-    ChamadosModule
+    ClientesModule,
+    ChamadosModule,
+    NavBarModule
   ]
 })
 export class PagesModule { }
